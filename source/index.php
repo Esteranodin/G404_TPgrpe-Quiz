@@ -2,14 +2,8 @@
 
 session_start();
 
-
-$_SESSION['pseudo'] = $_POST['pseudo'];
-
-
-
-
-
 ?>
+
 
 
 
@@ -27,7 +21,7 @@ $_SESSION['pseudo'] = $_POST['pseudo'];
 <body>
     <h1>QUIZ</h1>
     
-<form action="" method="POST">
+<form action="../process/connexion_process.php" method="POST">
 
 
     <label for="pseudo">Votre pseudo</label> 
@@ -36,6 +30,19 @@ $_SESSION['pseudo'] = $_POST['pseudo'];
     <br>
     <button type="submit">Confirmer</button>
 </form>
+
+<?php
+// retravailler message si pas de js
+        // $_SESSION['success'] = "Le pseudo '$pseudo' a été ajouté avec succès!";
+// Afficher un message d'erreur ou de succès
+// if (isset($_SESSION['error'])) {
+//     echo '<p style="color:red;">' . $_SESSION['error'] . '</p>';
+//     unset($_SESSION['error']);
+// } else if (isset($_SESSION['success'])) {
+//     echo '<p style="color:green;">' . $_SESSION['success'] . '</p>';
+//     unset($_SESSION['success']);
+// }
+?>
    
 </body>
 
