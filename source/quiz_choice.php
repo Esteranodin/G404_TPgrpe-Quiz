@@ -57,7 +57,7 @@ try {
             </div>
             
         </div>
-        <form action="./quiz_playing.php">
+        <form action="./quiz_playing.php" method="post">
         <input type="hidden" name="id_quiz" value="<?= $typeQuiz["id"] ?>"/>
         <button type="submit">Let's go !</button>
         </form>

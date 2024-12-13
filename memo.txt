@@ -5,3 +5,4 @@ Nous :
 	process connexion si pas de session pas de quie a finir
 	si il y a le meme pseudo reco sur sa session
 
+réafficher les echos erreur dans index.php

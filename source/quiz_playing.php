@@ -10,8 +10,6 @@ $sql_questions = "SELECT content FROM question
 JOIN quiz on quiz.id = id_quiz
 WHERE quiz.id = :id_quiz";
 
-var_dump($id_quiz);
-die();
 
 try {
     $stmt = $pdo->prepare($sql_questions);
@@ -60,6 +58,8 @@ try {
         ?>
             <div class="questions">
                 <?= $question['content'] ?>
+        </div>
+
             <?php
         }
             ?>
