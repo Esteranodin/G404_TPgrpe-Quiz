@@ -1,17 +1,46 @@
 <?php
 require_once '../utils/connect_db.php';
+
 session_start();
 
-$sql = "SELECT `content` FROM `question` 
-JOIN quiz on quiz.id = `id_quiz`
+$id_quiz = $_POST['id_quiz'];
+
+// ----------------- Requête pour récupérer les questions -----------------
+$sql_questions = "SELECT content FROM question 
+JOIN quiz on quiz.id = id_quiz
 WHERE quiz.id = :id_quiz";
 
+var_dump($id_quiz);
+die();
+
 try {
-    $stmt = $pdo->prepare($sql);
-    $patients = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $pdo->prepare($sql_questions);
+    $stmt->execute([
+        ':id_quiz' => $_POST['id_quiz']
+    ]);
+    $questions = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 } catch (PDOException $error) {
     echo "Erreur lors de la requete : " . $error->getMessage();
 }
+
+// ----------------- Requête pour récupérer les questions -----------------
+// $sql_answers = "SELECT `content` FROM `question` 
+// JOIN quiz on quiz.id = `id_quiz`
+// WHERE quiz.id = :id_quiz";
+
+// try {
+//     $stmt = $pdo->prepare($sql_answers);
+//     $stmt->execute([
+//         ':id_quiz' => $_POST['id_quiz']
+//     ]);
+//     $questions = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// } catch (PDOException $error) {
+//     echo "Erreur lors de la requete : " . $error->getMessage();
+// }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -36,16 +65,8 @@ try {
             ?>
     </section>
 
-    <section class="answers">
-        <?php
-        foreach ($answers as $answer) {
-        ?>
-            <div class="answers">
-                <?= $answer['content'] ?>
-            <?php
-        }
-            ?>
-    </section>
+
+    
 </body>
 
 </html>

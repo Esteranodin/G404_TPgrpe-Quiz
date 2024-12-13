@@ -32,7 +32,7 @@ session_start();
 
         <h1 class="font-changa text-9xl text-center mb-16">QUIZ</h1>
 
-        <form action="" method="POST" class="flex flex-col justify-center items-center w-full">
+        <form action="../process/connexion_process.php" method="post" class="flex flex-col justify-center items-center w-full">
             <label for="pseudo" class="font-changa text-3xl">Votre pseudo</label>
             <input type="text" id="pseudo" name="pseudo"
                 class="border-[3px] border-black rounded-[17px] shadow-inner-lg bg-white w-[70%] h-10"
