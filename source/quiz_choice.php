@@ -1,6 +1,22 @@
 <?php
 
+require_once '../utils/connect_db.php';
+
 session_start();
+
+$sql = "SELECT * FROM quiz";
+
+try {
+    $test = $pdo->query($sql);
+    $typesQuiz = $test->fetchAll(PDO::FETCH_ASSOC); // Fetch patient details
+
+} catch (PDOException $error) {
+    echo "Erreur lors de la requete : " . $error->getMessage();
+}
+
+
+
+
 
 
 ?>
@@ -15,5 +31,42 @@ session_start();
 </head>
 <body>
     
+
+<p>Bienvenue <?= $_SESSION["pseudo"]  ?></p>
+<h2>Choix du quiz</h2>
+<section class="container">
+    <?php
+    foreach($typesQuiz as $typeQuiz){
+        
+    ?>
+    <article>
+        <h3><?=  $typeQuiz["name"] ?></h3>
+        <hr>
+        <div>
+            <div>
+                <p></p>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+                <p></p>
+            </div>
+            
+        </div>
+        <form action="./quiz_playing.php">
+        <input type="hidden" name="id_quiz" value="<?= $typeQuiz["id"] ?>"/>
+        <button type="submit">Let's go !</button>
+        </form>
+    </article>
+    <?php
+}
+?>
+</section>
+
+
 </body>
 </html>
