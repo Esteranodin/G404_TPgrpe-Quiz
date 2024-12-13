@@ -556,38 +556,6 @@ video {
   display: none;
 }
 
-.btn-custom{
-  margin-top: 1rem;
-  width: 40%;
-  border-radius: 30%;
-  border-width: 4px;
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
-  background-color: var(--primary-color);
-  padding: 0.5rem;
-  font-family: Changa One, sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
-}
-
-.btn-custom:hover{
-  border-color: var(--light-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
-}
-
-.btn-custom:focus{
-  border-color: var(--light-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-  --tw-ring-color: var(--light-color);
-}
-
 .col-span-1{
   grid-column: span 1 / span 1;
 }
@@ -741,10 +709,6 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
 }
 
-.border-primary{
-  border-color: var(--primary-color);
-}
-
 .bg-blue-500{
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
@@ -780,14 +744,6 @@ video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
 }
 
-.bg-fond-quadrille{
-  background-image: url('/images//Fond quadrillé.jpg');
-}
-
-.bg-gradient-clair-orange{
-  background-image: linear-gradient(to bottom, var(--light-color) 68%, var(--secondary-color) 100%);
-}
-
 .bg-cover{
   background-size: cover;
 }
@@ -804,10 +760,6 @@ video {
   text-align: center;
 }
 
-.font-changa{
-  font-family: Changa One, sans-serif;
-}
-
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -816,12 +768,6 @@ video {
 .text-9xl{
   font-size: 8rem;
   line-height: 1;
-}
-
-.shadow-inner-lg{
-  --tw-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
-  --tw-shadow-colored: inset 0 4px 8px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /* FONTS  */
