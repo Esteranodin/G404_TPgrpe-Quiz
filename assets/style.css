@@ -1,3 +1,22 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+/* FONTS  */
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Rubik:wght@400;500;700&display=swap');
+
+
+/* COULEURS */
+:root {
+    --primary-color: #6E433C; /* Marron */
+    --secondary-color: #E7C298; /* Orange */
+    --light-color: #FEFBE8; /* Clair */
+    --dark-color: #541A25; /* Foncé */
+    --background-color: #FDFAE6; /* Fond */
+  }
+  
+  html, body {
+      overflow-x: hidden; /* Empêche le défilement horizontal sur toute la page */
+      width: 100%;
+  }
