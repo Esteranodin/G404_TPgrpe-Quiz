@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // Chemins où Tailwind doit rechercher les classes
-  content: ["./index.html", "./source/index.php"],
-
+  content: [
+    "./Front-html/Page1.html", 
+    "./Front-html/Page2.html",
+    "./source/index.php"
+  ],
   theme: {
     extend: {
       colors: {
@@ -13,7 +16,7 @@ module.exports = {
         background: 'var(--background-color)', // Fond
       },
       backgroundImage: {
-        'fond-quadrille': "url('/images//Fond quadrillé.jpg')",
+        'fond-quadrille': "url('../images//Fond quadrillé.jpg')",
         'gradient-clair-orange': 'linear-gradient(to bottom, var(--light-color) 68%, var(--secondary-color) 100%)',
       },
       fontFamily: {
