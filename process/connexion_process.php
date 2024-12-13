@@ -8,51 +8,40 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     return;
 }
 
-// if (
-//     !isset(
-//         $_POST['firstName'],
-//         $_POST['lastName'],
-//         $_POST['age'],
-//         $_POST['email'],
-//         $_POST['password']
-//     )
-// ) {
-//     header('location: ../source/index.php?error=1');
-//     return;
-// }
+if (
+    !isset(
+        $_POST['pseudo'],
+    )
+) {
+    header('location: ../source/index.php?error=1');
+    return;
+}
 
-// if (
-//     empty($_POST['firstName']) ||
-//     empty($_POST['lastName']) ||
-//     empty($_POST['age']) ||
-//     empty($_POST['email']) ||
-//     empty($_POST['password'])
-// ) {
-//     header('location: ../source/index.php?error=2');
-//     return;
-// }
+if (
+    empty($_POST['pseudo'])
+   
+) {
+    header('location: ../source/index.php?error=2');
+    return;
+}
+
+// si pseudo deja existant 
+
+// si pas de session pas de quiz
+
 
 // input sanitization
-// $firstName = htmlspecialchars(trim($_POST['firstName']));
-// $lastName = htmlspecialchars(trim($_POST['lastName']));
-// $age = htmlspecialchars(trim($_POST['age']));
-// $email = htmlspecialchars(trim($_POST['email']));
-// $password = htmlspecialchars(trim($_POST['password']));
+$pseudo = htmlspecialchars(trim($_POST['pseudo']));
+
+if(
+    strlen($pseudo) > 15 
+) {
+    header('location: ../source/index.php');
+    return;
+}
 
 
-// if(
-//     strlen($firstName) > 50 ||
-//     strlen($lastName) > 50 ||
-//     $age > 120 ||
-//     $age < 0
-// ) {
-//     header('location: ../source/index.php');
-//     return;
-// }
-
-
-
-// mon code 
+// requête sql
 
 
 header('location: ../source/quiz_choice.php?pseudo=' . $pseudo);
