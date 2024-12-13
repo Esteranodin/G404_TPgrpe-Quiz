@@ -553,3 +553,89 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+
+.m-4 {
+  margin: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.rounded-\[42PX\] {
+  border-radius: 42PX;
+}
+
+.border-b-\[15px\] {
+  border-bottom-width: 15px;
+}
+
+.border-l-\[7px\] {
+  border-left-width: 7px;
+}
+
+.border-r-\[15px\] {
+  border-right-width: 15px;
+}
+
+.border-t-\[7px\] {
+  border-top-width: 7px;
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.bg-fond-quadrille {
+  background-image: url('/images//Fond quadrillé.jpg');
+}
+
+.bg-gradient-clair-orange {
+  background-image: linear-gradient(to bottom, var(--light-color) 68%, var(--secondary-color) 100%);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+:root {
+  --primary-color: #6E433C;
+  /* Marron */
+  --secondary-color: #E7C298;
+  /* Orange */
+  --light-color: #FEFBE8;
+  /* Clair */
+  --dark-color: #541A25;
+  /* Foncé */
+  --background-color: #FDFAE6;
+  /* Fond */
+}
+  

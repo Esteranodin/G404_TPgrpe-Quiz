@@ -1,3 +1,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+    --primary-color: #6E433C; /* Marron */
+    --secondary-color: #E7C298; /* Orange */
+    --light-color: #FEFBE8; /* Clair */
+    --dark-color: #541A25; /* Foncé */
+    --background-color: #FDFAE6; /* Fond */
+  }
+  
