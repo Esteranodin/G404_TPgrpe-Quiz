@@ -1,5 +1,5 @@
 Marion : 
-requete sql questions et reponses
+requete sql reponses et for each
 
 Nous :
 	process connexion si pas de session pas de quie a finir
