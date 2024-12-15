@@ -4,6 +4,17 @@ require_once '../utils/connect_db.php';
 
 session_start();
 
+
+
+
+
+if (!isset($_SESSION['pseudo'])) {
+    header('Location: ../source/index.php?error=1');
+    exit;
+}
+
+
+
 $sql = "SELECT * FROM quiz";
 
 try {

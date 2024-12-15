@@ -1,79 +1,59 @@
 <?php
-
 require_once '../utils/connect_db.php';
-
 session_start();
 
-$_SESSION['pseudo'];
-
-
-// ----------------- SECU -----------------
-
+// Sécurité : vérifier que la méthode est bien POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('location: ../source/index.php');
-    return;
+    exit;
 }
 
-if (
-    !isset(
-        $_POST['pseudo'],
-    )
-) {
-    header('location: ../source/index.php?error=1');
-    return;
+// Vérification si le champ pseudo est bien rempli
+if (empty($_POST['pseudo'])) {
+    $_SESSION['error'] = 'Le pseudo est obligatoire.';
+    header('location: ../source/index.php');
+    exit;
 }
 
-if (
-    empty($_POST['pseudo'])
-
-) {
-    header('location: ../source/index.php?error=2');
-    return;
-}
-
-// si pas de session pas de quiz
-//ne fonctionne pas
-if (
-    !isset(
-        $_SESSION['pseudo'])
-    ) {
-        header('location: ../source/index.php?error=1');
-        return;
-}
-
-// input sanitization
+// Récupération et validation du pseudo
 $pseudo = htmlspecialchars(trim($_POST['pseudo']));
 
-if (
-    strlen($pseudo) > 15
-) {
+// Validation du format du pseudo (uniquement alphanumérique et entre 3 et 15 caractères)
+if (!preg_match('/^[a-zA-Z0-9_]{3,15}$/', $pseudo)) {
+    $_SESSION['error'] = 'Le pseudo doit être alphanumérique et comporter entre 3 et 15 caractères.';
     header('location: ../source/index.php');
-    return;
-}
-// ----------------- SECU END -----------------
-
-if (isset($pseudo)) { 
-  
-    // Vérifier si le pseudo existe déjà dans la table 'player'
-    $sql = "SELECT COUNT(*) FROM player WHERE pseudo = :pseudo";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR); // on récup variable sql :pseudo, pour lui donner la valeur de la variable php $pseudo, avec comme paramètre l'obligation d'une chaîne de caractères
-    $stmt->execute();
-
-    $countPseudo = $stmt->fetchColumn(); // Au count récupéré dans $stmt on lui applique la fonction qui retourne une colonne depuis la ligne suivante d'un jeu de résultats 
-
-    if ($countPseudo > 0) { 
-        $_SESSION['error'] = "Le pseudo '$pseudo' existe déjà. Choisissez-en un autre.";
-    } else {
-        // Si le pseudo est disponible on l'ajoute dans notre BDD
-        $insertSQL = "INSERT INTO player (pseudo) VALUES (:pseudo)";
-        $insertStmt = $pdo->prepare($insertSQL);
-        $insertStmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
-        $insertStmt->execute();
-
-        // Enregistrer le pseudo dans la session
-        $_SESSION['pseudo'] = $pseudo;
-    }
+    exit;
 }
 
-header('location: ../source/quiz_choice.php?pseudo=' . $pseudo);
+// Vérifier si le pseudo existe déjà dans la base de données
+$sql = "SELECT COUNT(*) FROM player WHERE pseudo = :pseudo";
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+$stmt->execute();
+$countPseudo = $stmt->fetchColumn();
+
+// Si le pseudo existe déjà
+if ($countPseudo > 0) {
+    $_SESSION['error'] = "Le pseudo '$pseudo' existe déjà. Choisissez-en un autre.";
+    header('location: ../source/index.php');
+    exit;
+}
+
+// Si le pseudo est disponible, on l'ajoute dans la base de données
+$insertSQL = "INSERT INTO player (pseudo) VALUES (:pseudo)";
+$insertStmt = $pdo->prepare($insertSQL);
+$insertStmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+$insertStmt->execute();
+
+
+
+
+$id_player = $pdo->lastInsertId(); // On recupere le dernier ID et on le stocke dans id_player
+
+// Enregistrer le pseudo et l'ID du joueur dans la session
+$_SESSION['pseudo'] = $pseudo;
+$_SESSION['id_player'] = $id_player; 
+
+// Rediriger vers la page de choix du quiz
+header('location: ../source/quiz_choice.php');
+exit;
