@@ -4,6 +4,22 @@ require_once '../utils/connect_db.php';
 
 session_start();
 
+
+
+if (isset($_SESSION['player_id']) && isset($_SESSION['pseudo'])) {
+    $playerId = $_SESSION['player_id'];
+    $pseudo = $_SESSION['pseudo'];
+
+
+
+    // Continuer avec l'affichage du quiz ou d'autres fonctionnalités...
+} else {
+    // Si la session n'a pas été trouvée, rediriger vers l'index
+    header('location: ../source/index.php');
+    exit;
+}
+
+echo $_SESSION["player_id"];
 $sql = "SELECT * FROM quiz";
 
 try {
@@ -57,7 +73,7 @@ try {
             </div>
             
         </div>
-        <form action="./quiz_playing.php">
+        <form action="./quiz_playing.php" method="post">
         <input type="hidden" name="id_quiz" value="<?= $typeQuiz["id"] ?>"/>
         <button type="submit">Let's go !</button>
         </form>

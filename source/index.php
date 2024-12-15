@@ -2,6 +2,12 @@
 
 session_start();
 
+
+
+
+
+
+
 ?>
 
 
@@ -41,6 +47,7 @@ session_start();
             <button type="submit" class="btn-custom btn-custom:hover btn-custom:focus">
                 Valider</button> 
         </form>
+        
 
 
         <!-- A RETRAVAILLER -->
