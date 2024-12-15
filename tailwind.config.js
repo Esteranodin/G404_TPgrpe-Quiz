@@ -4,6 +4,9 @@ module.exports = {
   content: [
     "./Front-html/Page1.html", 
     "./Front-html/Page2.html",
+    "./Front-html/Page3.html",
+    "./Front-html/Page4.html",
+
     "./source/index.php"
   ],
   theme: {
