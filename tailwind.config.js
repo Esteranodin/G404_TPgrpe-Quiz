@@ -30,6 +30,16 @@ module.exports = {
       textShadow: {
         'white': '2px 2px 4px rgba(255, 255, 255, 0.7)', // Ombre blanche autour du texte
       },
+      animation: {
+        float: 'float 3s ease-in-out infinite',
+        float2: 'float 3s ease-in-out infinite 1.5s', // Pour décaler l'animation
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px) translateX(0px)' },
+          '50%': { transform: 'translateY(-8px) translateX(4px)' },
+        },
+      },
     },
   },
 
