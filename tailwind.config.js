@@ -17,6 +17,7 @@ module.exports = {
       },
       backgroundImage: {
         'fond-quadrille': "url('../images//Fond quadrillé.jpg')",
+        'grid-pattern': "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC')",
         'gradient-clair-orange': 'linear-gradient(to bottom, var(--light-color) 68%, var(--secondary-color) 100%)',
       },
       fontFamily: {
@@ -33,11 +34,16 @@ module.exports = {
       animation: {
         float: 'float 3s ease-in-out infinite',
         float2: 'float 3s ease-in-out infinite 1.5s', // Pour décaler l'animation
+        'bg-scroll': 'bg-scrolling-reverse 1.92s linear infinite',
+
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px) translateX(0px)' },
           '50%': { transform: 'translateY(-8px) translateX(4px)' },
+          'bg-scrolling-reverse': {
+          '100%': { backgroundPosition: '50px 50px' },
+        },
         },
       },
     },
