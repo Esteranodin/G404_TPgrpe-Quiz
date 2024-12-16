@@ -5,29 +5,21 @@ require_once '../utils/connect_db.php';
 session_start();
 
 
-
-
-
 if (!isset($_SESSION['pseudo'])) {
     header('Location: ../source/index.php?error=1');
     exit;
 }
 
 
-
 $sql = "SELECT * FROM quiz";
 
 try {
     $test = $pdo->query($sql);
-    $typesQuiz = $test->fetchAll(PDO::FETCH_ASSOC); // Fetch patient details
+    $typesQuiz = $test->fetchAll(PDO::FETCH_ASSOC);
 
 } catch (PDOException $error) {
     echo "Erreur lors de la requete : " . $error->getMessage();
 }
-
-
-
-
 
 
 ?>

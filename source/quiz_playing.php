@@ -4,15 +4,13 @@ require_once '../utils/connect_db.php';
 session_start();
 
 
-
-
-// Vérification que l'ID du quiz est bien passé en POST
+// Vérification que l'Id du quiz est bien passé en POST
 if (!isset($_POST['id_quiz'])) {
     header('Location: ./quiz_choice.php');
     exit;
 }
 
-$id_quiz = $_POST['id_quiz']; // Récupérer l'ID du quiz depuis la requête POST
+$id_quiz = $_POST['id_quiz']; // Récupérer l'Id du quiz depuis la requête POST
 
 // ----------------- Requête pour récupérer les questions -----------------
 $sql_questions = "SELECT id, content FROM question WHERE id_quiz = :id_quiz";
@@ -27,6 +25,8 @@ try {
 
 // ----------------- Requête pour récupérer les réponses -----------------
 $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id_question";
+
+
 ?>
 
 <!DOCTYPE html>
