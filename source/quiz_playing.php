@@ -108,14 +108,14 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
                     </div>
 
                 </div>
-                <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom2:focus">
+                <!-- <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom2:focus">
                     Valider
-                </button>
+                </button> -->
 
         </article>
-  </form>
 
-        <footer>
+
+        <!-- <footer>
             <div class="mb-4">
                 <label for="timer" class="text-lg font-bold">Temps :</label>
                 <progress id="timer" value="0" max="100" class="w-full h-5 rounded-full bg-red-600">
@@ -128,18 +128,21 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
                 <br>
                 <span id="score" class="text-lg">Votre score : 0 pts</span>
             </div>
-        </footer>
+        </footer> -->
 
-
-
+   
+  </form>
+ 
     <?php
             }
     ?>
 
-  
+    <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom2:focus">
+                    Valider
+                </button>
 
 </section>
-
+  
 </body>
 
 </html>

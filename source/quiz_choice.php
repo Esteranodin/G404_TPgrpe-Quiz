@@ -66,11 +66,11 @@ try {
         </header>
 
         <main class="flex flex-col gap-10">
- <?php
+            <?php
             foreach ($typesQuiz as $typeQuiz) {
 
             ?>
-           
+
                 <!-- CHOIX*************************************************************************** 
    ******************************************************************************************** 
    ******************************************************************************************** 
@@ -90,73 +90,73 @@ try {
                     <div class="flex flex-col gap-4">
 
                         <!-- RANK 1  -->
-                    <!-- RANK 1  -->
-                    <div
-                        class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
-                        <div class="flex gap-2">
+                        <!-- RANK 1  -->
+                        <div
+                            class="flex flex-row items-center justify-between mx-10 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                            <div class="flex gap-2">
 
-                            <span
-                                class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
-                                1
-                            </span>
+                                <span
+                                    class="inline-flex items-center justify-center w-8 h-8 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                    1
+                                </span>
 
-                            <div class="flex flex-col ml-4">
-                                <span class="text-black text-xl font-bold ">Davis Curtis</span>
-                                <span class="text-graycustom text-lg font-semibold">2,569 points</span>
+                                <div class="flex flex-col ml-4">
+                                    <span class="text-black text-lg font-bold ">Davis Curtis</span>
+                                    <span class="text-graycustom text-base font-semibold">2,569 points</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <img src="../images/Phone - Quiz sélection/Gold.png" alt="Médaille d'or"
+                                    class="w-[2.5rem] inline-flex items-center justify-center ">
                             </div>
                         </div>
 
-                        <div>
-                            <img src="../images/Phone - Quiz sélection/Gold.png" alt="Médaille d'or"
-                                class="w-[2.5rem] inline-flex items-center justify-center ">
-                        </div>
-                    </div>
+                        <!-- RANK 2  -->
+                        <div
+                            class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                            <div class="flex gap-2">
 
-                    <!-- RANK 2  -->
-                    <div
-                        class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
-                        <div class="flex gap-2">
+                                <span
+                                    class="inline-flex items-center justify-center w-8 h-8 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                    2
+                                </span>
 
-                            <span
-                                class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
-                                2
-                            </span>
+                                <div class="flex flex-col ml-4">
+                                    <span class="text-black text-lg font-bold ">Alena Donin</span>
+                                    <span class="text-graycustom text-base font-semibold">1,469 points</span>
+                                </div>
+                            </div>
 
-                            <div class="flex flex-col ml-4">
-                                <span class="text-black text-xl font-bold ">Alena Donin</span>
-                                <span class="text-graycustom text-lg font-semibold">1,469 points</span>
+                            <div>
+                                <img src="../images/Phone - Quiz sélection/Silver.png" alt="Médaille d'argent"
+                                    class="w-[2.5rem] inline-flex items-center justify-center ">
                             </div>
                         </div>
 
-                        <div>
-                            <img src="../images/Phone - Quiz sélection/Silver.png" alt="Médaille d'argent"
-                                class="w-[2.5rem] inline-flex items-center justify-center ">
-                        </div>
-                    </div>
 
+                        <!-- RANK 3  -->
+                        <div
+                            class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                            <div class="flex gap-2">
 
-                    <!-- RANK 3  -->
-                    <div
-                        class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
-                        <div class="flex gap-2">
+                                <span
+                                    class="inline-flex items-center justify-center w-8 h-8 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                    3
+                                </span>
 
-                            <span
-                                class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
-                                3
-                            </span>
+                                <div class="flex flex-col ml-4">
+                                    <span class="text-black text-lg font-bold "> Graig Gouse</span>
+                                    <span class="text-graycustom text-base font-semibold">1,053 points</span>
+                                </div>
+                            </div>
 
-                            <div class="flex flex-col ml-4">
-                                <span class="text-black text-xl font-bold ">Graig Gouse</span>
-                                <span class="text-graycustom text-lg font-semibold">1,053 points</span>
+                            <div>
+                                <img src="../images/Phone - Quiz sélection/Bronze.png" alt="Médaille de Bronze"
+                                    class="w-[2.5rem] inline-flex items-center justify-center ">
                             </div>
                         </div>
-
-                        <div>
-                            <img src="../images/Phone - Quiz sélection/Bronze.png" alt="Médaille de Bronze"
-                                class="w-[2.5rem] inline-flex items-center justify-center ">
-                        </div>
                     </div>
-                </div>
 
 
                     <form action="./quiz_playing.php" method="post">

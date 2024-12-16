@@ -9,7 +9,9 @@ module.exports = {
 
     "./source/index.php",
     "./source/quiz_choice.php",
-    "./source/quiz_playing.php"
+    "./source/quiz_playing.php",
+    "./source/quiz_resultat.php"
+
   ],
   theme: {
     extend: {
