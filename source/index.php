@@ -26,7 +26,7 @@ session_start();
 
         <h1 class="font-changa text-9xl text-center mb-16">QUIZ</h1>
 
-        <!-- Message d'erreur (si présent) -->
+        <!-- Message d'erreur (si le pseudo est dèja dans la base de donnée) -->
         <?php if (isset($_SESSION['error'])): ?>
             <div class="error-message text-red-500 text-lg text-center mb-4">
                 <?= $_SESSION['error']; ?>

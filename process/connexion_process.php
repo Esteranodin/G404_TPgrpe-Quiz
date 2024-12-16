@@ -2,13 +2,13 @@
 require_once '../utils/connect_db.php';
 session_start();
 
-// Sécurité : vérifier que la méthode est bien POST
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('location: ../source/index.php');
     exit;
 }
 
-// Vérification si le champ pseudo est bien rempli
+
 if (empty($_POST['pseudo'])) {
     $_SESSION['error'] = 'Le pseudo est obligatoire.';
     header('location: ../source/index.php');
@@ -42,7 +42,7 @@ if ($countPseudo > 0) {
 // Si le pseudo est disponible, on l'ajoute dans la base de données
 $insertSQL = "INSERT INTO player (pseudo) VALUES (:pseudo)";
 $insertStmt = $pdo->prepare($insertSQL);
-$insertStmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+$insertStmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);// Permet de d'insérer le pseudo avec la valeur de la variable $pseudo avec obligatoirement une chaine de caractère.
 $insertStmt->execute();
 
 
@@ -54,6 +54,6 @@ $id_player = $pdo->lastInsertId(); // On recupere le dernier ID et on le stocke 
 $_SESSION['pseudo'] = $pseudo;
 $_SESSION['id_player'] = $id_player; 
 
-// Rediriger vers la page de choix du quiz
+
 header('location: ../source/quiz_choice.php');
 exit;
