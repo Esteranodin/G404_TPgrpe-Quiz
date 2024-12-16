@@ -73,7 +73,7 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
             <h1 class="font-changa text-[2.25em] text-primary">Jeux Vidéo</h1>
         </header>
 
-        <form action="../process/process_quiz_result.php" method="post">
+        <form action="../process/quiz_result_process.php" method="post">
 
         <article class="m-4">
             <?php
