@@ -1,3 +1,21 @@
+<?php
+require_once '../utils/connect_db.php';
+
+session_start();
+
+$sql_quizName = "SELECT `name` FROM `quiz` WHERE id = :id_name";
+try {
+    $stmt = $pdo->prepare($sql_quizName);
+    $stmt->execute([':id_name' => $_SESSION['id_quiz']]);
+    $quizName = $stmt->fetch(PDO::FETCH_ASSOC);
+
+} catch (PDOException $error) {
+    echo "Erreur lors de la requête des questions : " . $error->getMessage();
+
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -23,7 +41,7 @@
             <img src="../images/Phone - Quiz résultat/Group 33.png" alt="Image décorative" class="w-[120%] max-w-none">
         </div>
 
-        <h1 class="relative max-w-full mt-[8rem] font-changa text-primary text-4xl mb-10">NOM du QUIZ</h1>
+        <h1 class="relative max-w-full mt-[8rem] font-changa text-primary text-4xl mb-10"><?= $quizName['name'] ?></h1>
 
 
 
@@ -57,10 +75,10 @@
 
         <article>
             <h3 class="font-rubik text-dark font-bold text-3xl">
-                Bravo "PLAYER"
+                Bravo <?= $_SESSION["pseudo"] ?>
             </h3>
             <h4 class="font-rubik text-dark font-bold text-xl">
-                Votre score : 0pts
+                Votre score : <?= $_SESSION["score"] ?> pts
             </h4>
 
             

@@ -13,8 +13,9 @@ if (!isset($_SESSION['pseudo'])) {
 $sql = "SELECT * FROM quiz";
 
 try {
-    $test = $pdo->query($sql);
-    $typesQuiz = $test->fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $pdo->query($sql);
+    $typesQuiz = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 } catch (PDOException $error) {
     echo "Erreur lors de la requête : " . $error->getMessage();
 }
@@ -58,7 +59,11 @@ try {
                 <!-- Choix de quiz -->
                 <article class="relative h-full max-w-full bg-primaryopacity border-[5px] border-primary rounded-[1rem] shadow-inner-box lg:flex-row">
 
-                    <h3 class="text-light font-changa my-3 text-stroke"><?= htmlspecialchars($typeQuiz["name"]) ?></h3>
+                    <h3 class="text-light font-changa my-3 text-stroke"><?= $typeQuiz["name"] ?></h3>
+                  <!-- input caché pour récup id_quiz -->
+                    <input type="hidden" name="id_quiz" value="<?=htmlspecialchars($typeQuiz["id"])?>">
+                  
+                    <!-- Trait décoratif -->
                     <div class="border-t-8 border-light rounded-full mx-4 mb-6"></div>
 
                     <div class="flex flex-col gap-4">
