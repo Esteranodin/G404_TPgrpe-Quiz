@@ -20,7 +20,7 @@ module.exports = {
         primaryopacity: "rgba(110, 67, 60, 0.78)", // Marron- opacité
         secondary: "var(--secondary-color)", // Orange
         light: "var(--light-color)", // Clair
-        dark: "var(--dark-color)", // Foncé
+        darkprimary: "#541A25", // Foncé
         background: "var(--background-color)", // Fond
         graycustom: "#858494", // Gris
       },
@@ -79,10 +79,10 @@ module.exports = {
             {},
         },
         ".btn-custom2:hover": {
-          "@apply bg-dark": {},
+          "@apply bg-[#541A25]": {},
         },
         ".btn-custom2:focus": {
-          "@apply bg-dark": {},
+          "@apply bg-[#541A25]": {},
         },
       });
     },
