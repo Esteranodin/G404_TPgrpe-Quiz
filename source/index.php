@@ -17,7 +17,8 @@ session_start();
 <body class="fond-quadrille animate-bg-scroll overflow-x-hidden">
     <!-- <body class="bg-fond-quadrille bg-cover bg-center h-screen overflow-x-hidden"> -->
     <!-- Section principale -->
-    <section class="relative h-full max-w-full m-10 p-10 bg-gradient-clair-orange border-t-[7px] border-l-[7px] border-r-[15px] border-b-[15px] border-primary rounded-[42px]">
+    <section class="relative h-full max-w-full m-10 p-10 bg-gradient-clair-orange border-t-[7px] border-l-[7px] border-r-[15px] border-b-[15px] border-primary rounded-[42px] 
+    lg: m-25 ">
         <!-- Contenu principal -->
         <div class="flex justify-between w-full">
             <img src="../images/Phone - accueil/Feu tricolore.png" alt="Feu tricolore de décoration" class="h-10 max-w-full">
