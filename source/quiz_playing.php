@@ -2,7 +2,7 @@
 require_once '../utils/connect_db.php';
 
 session_start();
-
+$_SESSION['id_quiz'] = $_POST['id_quiz']; 
 
 // Vérification que l'Id du quiz est bien passé en POST
 if (!isset($_POST['id_quiz'])) {
@@ -25,7 +25,6 @@ try {
 
 // ----------------- Requête pour récupérer les réponses -----------------
 $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id_question";
-
 
 ?>
 
