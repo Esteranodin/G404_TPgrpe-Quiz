@@ -3,6 +3,7 @@ require_once '../utils/connect_db.php';
 
 session_start();
 
+
 $sql_quizName = "SELECT `name` FROM `quiz` WHERE id = :id_name";
 try {
     $stmt = $pdo->prepare($sql_quizName);
@@ -14,6 +15,25 @@ try {
 
     exit;
 }
+
+
+$sqlClassement = "SELECT *
+FROM score 
+WHERE id_quiz = :id_quiz
+ORDER BY score DESC
+LIMIT 3";
+
+try {
+    $stmt = $pdo->prepare($sqlClassement);
+    $stmt->execute([':id_quiz' => $_SESSION['id_quiz']]);
+    $ScoreClassement = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+} catch (PDOException $error) {
+    echo "Erreur lors de la requête des questions : " . $error->getMessage();
+
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +71,7 @@ try {
                 <img src="../images/Phone - Quiz résultat/Podium/Silver-Medal.png" alt="Médaille d'argent" class="w-["rem]">
                 <div>
                     <p class="text-black text-xl font-bold ">Davis Curtis</p>
-                    <span class="text-graycustom text-[15px] font-semibold">2,569 points</span>
+                    <span class="text-graycustom text-[15px] font-semibold">21345</span>
                 </div>
                 <img src="../images/Phone - Quiz résultat/Podium/2.png" alt="Colone 2" class="bottom-">
             </div>
@@ -59,7 +79,7 @@ try {
             <div class="flex flex-col items-center">
                 <img src="../images/Phone - Quiz résultat/Podium/Gold-Medal.png" alt="Médaille d'or" class="w-[3rem]">
                 <p class="text-black text-xl font-bold ">Alena Donin</p>
-                <span class="text-graycustom text-[15px] font-semibold">3,469 points</span>
+                <span class="text-graycustom text-[15px] font-semibold">21345</</span>
                 <img src="../images/Phone - Quiz résultat/Podium/1.png" alt="Colone 1" class="bottom-0">
             </div>
 
@@ -67,7 +87,7 @@ try {
                 
                 <img src="../images/Phone - Quiz résultat/Podium/Bronze-Medal.png" alt="Médaille de Bronze" class="w-[3rem]">
                 <p class="text-black text-xl font-bold ">Graig Gouse</p>
-                <span class="text-graycustom text-[15px] font-semibold">1,053 points</span>
+                <span class="text-graycustom text-[15px] font-semibold">21345</</span>
                 <img src="../images/Phone - Quiz résultat/Podium/3.png" alt="Colone 3">
             </div>
 
