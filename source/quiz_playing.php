@@ -81,6 +81,7 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
             ?>
                 <div class="bg-red-500 text-light font-chara rounded-lg p-6 mb-5">
                     <?= $question['content'] ?>
+                    
                 </div>
 
                 <!-- LES REPONSES -->
@@ -95,7 +96,7 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
                     foreach ($answers as $answer) {
                     ?>
                         <label>
-                            <input type="checkbox" name="answers[<?= $question['id'] ?>][]" value="<?= $answer['id'] ?>" />
+                            <input type="checkbox" name="answers[<?= $question['id'] ?>" value="<?= $answer['id'] ?>" />
                             <?= htmlspecialchars($answer['content']); ?>
                         </label><br>
                     <?php
