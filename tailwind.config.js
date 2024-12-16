@@ -1,18 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // Chemins où Tailwind doit rechercher les classes
-  content: [
-    "./Front-html/Page1.html",
-    "./Front-html/Page2.html",
-    "./Front-html/Page3.html",
-    "./Front-html/Page4.html",
-
-    "./source/index.php",
-    "./source/quiz_choice.php",
-    "./source/quiz_playing.php",
-    "./source/quiz_resultat.php"
-
-  ],
+    content: [
+      './index.php',
+      './source/**/*.php',
+    ],
   theme: {
     extend: {
       colors: {
