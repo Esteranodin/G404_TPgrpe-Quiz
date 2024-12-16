@@ -49,40 +49,58 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
     <!-- Section principale -->
     <section
         class="relative h-full max-w-full m-10 p-3 bg-gradient-clair-orange border-t-[7px] border-l-[7px] border-r-[15px] border-b-[15px] border-primary rounded-[42px]">
-        <!-- Image en haut de la section -->
-        <div class="absolute top-[-1rem] left-0 w-full flex justify-center items-start">
-            <img src="../images/Phone - Quiz question/Group 32.png" alt="Image décorative" class="w-[120%] max-w-none">
+
+
+        <!-- PHONE DECORATION         -->
+        <div class="absolute top-[-1rem] left-0 w-full flex justify-center items-start lg:hidden">
+            <img src="../images/Phone - Quiz question/Group 32.png" alt="Image décorative" class="w-[120%] max-w-none lg:hidden">
+        </div>
+        <!-- DESKTOP DECORATION         -->
+        <div class="hidden lg:block">
+            <img src="../images/Desktop - Quiz question/Décoration haut gauche (1).png" alt="Image décorative" class="hidden lg:block absolute top-[-2rem] left-0">
+            <img src="../images/Desktop - Quiz question/Group 35.png" alt="Image décorative 2" class="hidden lg:block absolute top-1 right-3">
         </div>
 
 
-        <header class="mt-[45%] mb-10 flex items-center gap-[15%]">
-            <div class="relative">
+        <header class="mt-[45%] mb-10 flex items-center gap-[15%] lg:mt-[5%]">
+            <div class="relative mt-[10%] ml-10">
+                <!-- phone -->
                 <img src="../images/Phone - Quiz question/Décoration haut gauche/Question.png" alt="Numéro question"
-                    class="scale-120">
+                    class="scale-120 lg:hidden">
+                <!-- Desktop -->
+                <img src="../images/Desktop - Quiz question/Décoration haut gauche/Question.png" alt="Numéro question"
+                    class="hidden lg:block lm-[-7rem]">
+
                 <div class="absolute inset-0 flex justify-center items-center mt-7">
                     <span class="text-light font-changa text-6xl">1</span>
                 </div>
 
                 <!-- Texte '/6' en haut à droite de l'image -->
-                <div class="absolute top-0 right-0 p-2 text-light font-changa text-lg mt-3">
+                <div class="absolute top-0 right-0 p-2 text-light font-changa text-lg mt-3 lg:ml-4">
                     /6
                 </div>
+
+
+                
             </div>
 
             <!-- "Jeux Vidéo" centré sur la droite -->
-            <h1 class="font-changa text-[2.25em] text-primary">Jeux Vidéo</h1>
+            <div class="flex items-center justify-center">
+  <h1 class="font-changa text-[2.25em] text-primary lg:text-9xl">Jeux Vidéo</h1>
+</div>
+
         </header>
 
         <form action="../process/quiz_result_process.php" method="post">
 
-        <article class="m-4">
-            <?php
-            foreach ($questions as $question) {
-            ?>
-                <div class="bg-red-500 text-light font-chara rounded-lg p-6 mb-5">
-                    <?= $question['content'] ?>
-                    
-                </div>
+            <article class="m-4">
+                <?php
+                foreach ($questions as $question) {
+                ?>
+                    <div class="bg-[#541A25] text-light font-chara rounded-lg p-6 mb-5 lg:w-[60%] ml-[25%]">
+                        <?= $question['content'] ?>
+
+                    </div>
 
 
                     <!-- LES REPONSES -->
@@ -96,29 +114,23 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
                         // Afficher chaque réponse sous forme de cases à cocher
                         foreach ($answers as $answer) {
                         ?>
-                            <label>
-                                <input type="checkbox" name="answers[<?= $question['id'] ?>]" value="<?= $answer['id'] ?>" />
+                            <label class="bg-[#6E433C] text-light font-chara rounded-lg p-6">
+                                <input type="checkbox" name="answers[<?= $question['id'] ?>]" value="<?= $answer['id'] ?> " />
                                 <?= htmlspecialchars($answer['content']); ?>
                             </label><br>
                         <?php
                         }
                         ?>
+                    </div>
 
-                        <!-- 1 -->
-                        <div class="bg-blue-300 text-light font-chara rounded-lg p-6">
-                            Réponse 1
-                        </div>             
-
-                </div>
-                
             </article>
 
-            <?php
-            }
-    ?>            
-            <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom2:focus">
-                Valider
-            </button>
+        <?php
+                }
+        ?>
+        <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom2:focus">
+            Valider
+        </button>
 
         <!-- <footer>
             <div class="mb-4">
@@ -134,11 +146,11 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
                 <span id="score" class="text-lg">Votre score : 0 pts</span>
             </div>
         </footer> -->
-   
-  </form>
- 
-</section>
-  
+
+        </form>
+
+    </section>
+
 </body>
 
 </html>
