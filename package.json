@@ -4,8 +4,7 @@
   "description": "Application ludique et interactive de quiz entre joueurs.",
   "main": "index.js",
   "scripts": {
-   "build:css": "tailwindcss build -i ./assets/style.css -o ./assets/output.css --watch"
-
+    "build:css": "tailwindcss build -i ./assets/style.css -o ./assets/output.css --watch"
   },
   "keywords": [],
   "author": "",
