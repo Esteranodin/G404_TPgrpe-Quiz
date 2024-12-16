@@ -16,7 +16,7 @@ $id_quiz = $_POST['id_quiz']; // Récupérer l'Id du quiz depuis la requête POS
 $sql_questions = "SELECT id, content FROM question WHERE id_quiz = :id_quiz";
 try {
     $stmt = $pdo->prepare($sql_questions);
-    $stmt->execute([ ':id_quiz' => $id_quiz ]);
+    $stmt->execute([':id_quiz' => $id_quiz]);
     $questions = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $error) {
     echo "Erreur lors de la requête des questions : " . $error->getMessage();
@@ -84,29 +84,30 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
                     
                 </div>
 
-                <!-- LES REPONSES -->
-                <div class="flex flex-col mx-3 gap-5 mb-5">
-                <?php
-                    // Préparer et exécuter la requête pour récupérer les réponses liées à la question
-                    $stmt_answers = $pdo->prepare($sql_answers);
-                    $stmt_answers->execute([':id_question' => $question['id']]);
-                    $answers = $stmt_answers->fetchAll(PDO::FETCH_ASSOC);
 
-                    // Afficher chaque réponse sous forme de cases à cocher
-                    foreach ($answers as $answer) {
-                    ?>
-                        <label>
-                            <input type="checkbox" name="answers[<?= $question['id'] ?>" value="<?= $answer['id'] ?>" />
-                            <?= htmlspecialchars($answer['content']); ?>
-                        </label><br>
-                    <?php
-                    }
-                    ?>
+                    <!-- LES REPONSES -->
+                    <div class="flex flex-col mx-3 gap-5 mb-5">
+                        <?php
+                        // Préparer et exécuter la requête pour récupérer les réponses liées à la question
+                        $stmt_answers = $pdo->prepare($sql_answers);
+                        $stmt_answers->execute([':id_question' => $question['id']]);
+                        $answers = $stmt_answers->fetchAll(PDO::FETCH_ASSOC);
 
-                    <!-- 1 -->
-                    <div class="bg-blue-300 text-light font-chara rounded-lg p-6">
-                        Réponse 1
-                    </div>
+                        // Afficher chaque réponse sous forme de cases à cocher
+                        foreach ($answers as $answer) {
+                        ?>
+                            <label>
+                                <input type="checkbox" name="answers[<?= $question['id'] ?>]" value="<?= $answer['id'] ?>" />
+                                <?= htmlspecialchars($answer['content']); ?>
+                            </label><br>
+                        <?php
+                        }
+                        ?>
+
+                        <!-- 1 -->
+                        <div class="bg-blue-300 text-light font-chara rounded-lg p-6">
+                            Réponse 1
+                        </div>             
 
                 </div>
                 
