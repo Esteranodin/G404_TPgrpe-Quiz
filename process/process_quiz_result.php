@@ -4,6 +4,7 @@ require_once '../utils/connect_db.php';
 session_start();
 
 
+
 // Question permet de choper l'id de la question, id_answer c'est un tableau qui stocke un tableau à l'index 0 à chaque fois et l'id de la réponse que l'utilisateur a choisi
 foreach ($_POST["answers"] as $id_question => $id_answer) {
 
@@ -25,8 +26,10 @@ foreach ($_POST["answers"] as $id_question => $id_answer) {
             echo "Une erreur s'est produite : " . $th->getMessage();
         }
     }
+
     
     $result = $insertStmt->fetch(PDO::FETCH_ASSOC);
       var_dump ($result);
+
 
 ?>

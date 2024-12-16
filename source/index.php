@@ -36,7 +36,7 @@ session_start();
 
         <form action="../process/connexion_process.php" method="post" class="flex flex-col justify-center items-center w-full">
             <label for="pseudo" class="font-changa text-3xl">Votre pseudo</label>
-            <input type="text" id="pseudo" name="pseudo" class="border-[3px] border-black rounded-[17px] shadow-inner-lg bg-white w-[70%] h-10" placeholder="Votre pseudo ici" required>
+            <input type="text" id="pseudo" name="pseudo" class="border-[3px] border-black rounded-[17px] shadow-inner-lg bg-white w-[70%] h-10 pl-3" placeholder="Votre pseudo ici" required>
 
             <button type="submit" class="btn-custom btn-custom:hover btn-custom:focus">
                 Valider

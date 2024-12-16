@@ -81,7 +81,9 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
             ?>
                 <div class="bg-red-500 text-light font-chara rounded-lg p-6 mb-5">
                     <?= $question['content'] ?>
+                    
                 </div>
+
 
                     <!-- LES REPONSES -->
                     <div class="flex flex-col mx-3 gap-5 mb-5">
@@ -105,21 +107,20 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
                         <!-- 1 -->
                         <div class="bg-blue-300 text-light font-chara rounded-lg p-6">
                             Réponse 1
-                        </div>
+                        </div>             
 
                 </div>
                 
+            </article>
 
-        </article>
-        <?php
+            <?php
             }
-    ?>
-        <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom2:focus">
-                    Valider
-        </button>
-  </form>
+    ?>            
+            <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom2:focus">
+                Valider
+            </button>
 
-        <footer>
+        <!-- <footer>
             <div class="mb-4">
                 <label for="timer" class="text-lg font-bold">Temps :</label>
                 <progress id="timer" value="0" max="100" class="w-full h-5 rounded-full bg-red-600">
@@ -132,16 +133,12 @@ $sql_answers = "SELECT id, content, is_right FROM answer WHERE id_question = :id
                 <br>
                 <span id="score" class="text-lg">Votre score : 0 pts</span>
             </div>
-        </footer>
-
-
-
+        </footer> -->
    
-
-  
-
+  </form>
+ 
 </section>
-
+  
 </body>
 
 </html>
