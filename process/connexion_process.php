@@ -27,10 +27,18 @@ if (!preg_match('/^[a-zA-Z0-9_]{3,15}$/', $pseudo)) {
 
 // Vérifie si le pseudo existe déjà dans la base de données
 $sql = "SELECT COUNT(*) FROM player WHERE pseudo = :pseudo";
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
-$stmt->execute();
-$countPseudo = $stmt->fetchColumn();
+
+try {
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+    $stmt->execute();
+    $countPseudo = $stmt->fetchColumn();
+
+} catch (PDOException $error) {
+
+    echo "Une erreur s'est produite : " . $th->getMessage();
+}
 
 // Si le pseudo existe déjà 
 if ($countPseudo > 0) {
@@ -41,13 +49,23 @@ if ($countPseudo > 0) {
 
 // Si le pseudo est disponible, on l'ajoute dans la base de données
 $insertSQL = "INSERT INTO player (pseudo) VALUES (:pseudo)";
-$insertStmt = $pdo->prepare($insertSQL);
-// Permet de d'insérer le pseudo avec la valeur de la variable $pseudo + obligatoirement une chaine de caractère.
-$insertStmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR); 
-$insertStmt->execute();
 
-// On recupere le dernier Id et on le stocke dans id_player
-$id_player = $pdo->lastInsertId();
+try {
+
+    $insertStmt = $pdo->prepare($insertSQL);
+    // Permet de d'insérer le pseudo avec la valeur de la variable $pseudo + obligatoirement une chaine de caractère.
+    $insertStmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR); 
+    $insertStmt->execute();
+    
+    // On recupere le dernier Id et on le stocke dans id_player
+    $id_player = $pdo->lastInsertId();
+
+} catch (PDOException $error) {
+
+    echo "Une erreur s'est produite : " . $th->getMessage();
+}
+
+
 
 // Enregistre le pseudo et l'ID du joueur dans la session
 $_SESSION['pseudo'] = $pseudo;
