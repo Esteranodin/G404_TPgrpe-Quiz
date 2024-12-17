@@ -71,5 +71,31 @@ foreach ($_POST["answers"] as $id_question => $id_answer) {
 
 $_SESSION["score"] = $score;
 
+
+
+var_dump($_SESSION);
+
+$sqlStockScore = "INSERT INTO score (id_quiz, id_player, score)
+ VALUES (:id_quiz, :id_player, :score)";
+
+try {
+
+    $stmt = $pdo->prepare($sqlStockScore);
+    $stmt->bindParam(':id_quiz', $_SESSION["id_quiz"], PDO::PARAM_INT);
+    $stmt->bindParam(':score', $_SESSION["score"], PDO::PARAM_INT);
+    $stmt->bindParam(':id_player', $_SESSION["id_player"], PDO::PARAM_INT);
+    $stmt->execute();
+
+
+} catch (PDOException $error) {
+    // Gérer l'erreur si nécessaire
+    echo "Une erreur s'est produite : " . $error->getMessage();
+}
+
+
+
+
+
+
 header('location: ../source/quiz_resultat.php');
 exit;
