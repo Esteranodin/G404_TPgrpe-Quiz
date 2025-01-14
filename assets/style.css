@@ -51,3 +51,56 @@ body::before {
 .full-height-section {
   height: 100vh; /* Prend 100% de la hauteur de l'écran */
 }
+
+.bg-primary {
+    background-color: #6E433C; 
+}
+
+.bg-darkprimary {
+    background-color: #541A25;
+}
+
+.text-darkprimary {
+    color: #541A25; 
+}
+
+.btn-custom2 {
+    @apply m-5 p-5 bg-secondary text-darkprimary rounded-lg border-2 border-light w-[60%] font-changa text-3xl font-light shadow-lg;
+}
+
+.btn-custom2:hover {
+    @apply bg-[#E7C298]; /* Utilisation de la couleur secondary-color */
+}
+
+.btn-custom2:focus {
+    @apply bg-[#E7C298]; /* Utilisation de la couleur secondary-color */
+}
+
+.btn-custom3 {
+    @apply m-5 p-5 bg-secondary text-darkprimary rounded-lg border-2 border-light w-[60%] font-changa text-3xl font-light shadow-lg;
+}
+
+.btn-custom3:hover {
+    @apply bg-[#E7C298]; /* Utilisation de la couleur secondary-color */
+}
+
+.btn-custom3:focus {
+    @apply bg-[#E7C298]; /* Utilisation de la couleur secondary-color */
+}
+
+progress {
+    background-color: #541A25;
+    border-radius: 10px; /* Ajout pour arrondir les côtés */
+}
+progress::-webkit-progress-bar {
+    background-color: #541A25;
+    border-radius: 10px; /* Ajout pour arrondir les côtés */
+}
+progress::-webkit-progress-value {
+    background-color: var(--light-color);
+    border-radius: 10px; /* Ajout pour arrondir les côtés */
+}
+progress::-moz-progress-bar {
+    background-color: var(--light-color);
+    border-radius: 10px; /* Ajout pour arrondir les côtés */
+}

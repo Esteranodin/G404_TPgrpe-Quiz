@@ -4,111 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QUIZ || CHOIX </title>
     <link rel="stylesheet" href="../assets/output.css">
     <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script src="carousel_script.js" defer></script>
+
 </head>
 
-<body class="fond-quadrille animate-bg-scroll overflow-x-hidden bg-[#6E433C] bg-opacity-50">
-    <!-- Ajout d'une div avec une couleur de fond et une opacité de 40% -->
-    <!-- <div class="absolute inset-0 bg-[#6E433C] bg-opacity-50 z-0 h-screen w-full"></div> -->
+<body class="fond-quadrille animate-bg-scroll overflow-x-hidden bg-[#6E433C] bg-opacity-50 min-h-screen">
+    <!-- Ajout d'une div avec une couleur de fond et une opacité de 50% -->
+    <div class="fixed inset-0 bg-[#6E433C] bg-opacity-50 z-0 h-full w-full"></div>
 
     <!-- Section principale -->
     <section
-        class="relative h-full max-w-full m-10 p-3 bg-gradient-clair-orange border-t-[7px] border-l-[7px] border-r-[15px] border-b-[15px] border-primary rounded-[42px]">
+        class="relative h-full max-w-full my-[39px] mx-[30px] p-2 bg-gradient-clair-orange border-t-[7px] border-l-[7px] border-r-[15px] border-b-[15px] border-primary rounded-[42px]">
         <!-- Image en haut de la section -->
 
-    <header>
-        <div class="absolute top-[-1rem] left-0 w-full flex justify-center items-start">
-            <img src="../images/Phone - Quiz question/Group 32.png" alt="Image décorative" class="w-[120%] max-w-none">
-        </div>
+        <header>
+            <!-- *****************************************************************************************************************
+         *********************************************************************************************************************
+         ***************************************************************************************************** VERSION TELEPHONE -->
+            <section class="top-0 left-0 lg:hidden mb-[5%] ">
+                <!-- Conteneur principal -->
+                <div class="relative h-[110px] w-full overflow-hidden sm:h-[140px] md:h-[160px]">
+                    <div class="relative w-full h-[100%]">
+                        <!-- Polygone 1 -->
+                        <div class="absolute top-[7px] left-[5%] animate-float sm:top-[10px] sm:left-[6%]">
+                            <img src="../images/Phone - Quiz sélection/Déco haut gauche/P-1.png" alt="Polygone 1"
+                                class="sm:w-[120px] md:w-[155px] lg:hidden">
+                        </div>
+                        <!-- Polygone 2 -->
+                        <div class="absolute top-[7px] left-[27%] animate-float2 md:left-[30%]">
+                            <img src="../images/Phone - Quiz sélection/Déco haut gauche/P-2.png" alt="Polygone 2"
+                                class="sm:w-[120px] md:w-[150px] lg:hidden">
+                        </div>
+                        <!-- Polygone 3 -->
+                        <div class="absolute top-[7px] left-[55%] animate-float sm:left-[57%] ">
+                            <img src="../images/Phone - Quiz sélection/Déco haut droite/P-5.png" alt="Polygone 3"
+                                class="sm:w-[150px] md:w-[180px] lg:hidden">
+                        </div>
+                        <!-- Polygone 4 -->
+                        <div class="absolute top-[7px] left-[92%] animate-float2 sm:left-[85%] md:left-[87%]">
+                            <img src="../images/Phone - Quiz sélection/Déco haut droite/P-3.png" alt="Polygone 4"
+                                class="sm:w-[60px] md:w-[70px] lg:hidden">
+                        </div>
+                        <!-- Polygone 5 --> 
+                        <div class="absolute top-[27%] left-[5%] animate-float2 sm:left-[7%] top-[35%] md:top-[40%]">
+                            <img src="../images/Phone - Quiz sélection/Déco haut gauche/P-3.png" alt="Polygone 5"
+                                class="sm:w-[80px] md:w-[90px] lg:hidden">
+                        </div>
+                        <!-- Polygone 6 -->
+                        <div class="absolute top-[45%] left-[27%] animate-float sm:top-[50%] md:left-[23%]">
+                            <img src="../images/Phone - Quiz sélection/Déco haut gauche/P-4.png" alt="Polygone 6"
+                                class="sm:w-[100px] md:w-[120px] lg:hidden">
+                        </div>
+                        <!-- Polygone 7 -->
+                        <div class="absolute top-[30%] left-[55%] animate-float2 sm:left-[57%]">
+                            <img src="../images/Phone - Quiz sélection/Déco haut droite/P-4.png" alt="Polygone 7"
+                                class="sm:w-[120px] md:w-[150px] lg:hidden">
+                        </div>
+                        <!-- Polygone 8 -->
+                        <div class="absolute top-[47%] left-[35%] animate-float2 sm:left-[40%]">
+                            <img src="../images/Phone - Quiz sélection/Déco haut droite/P-6.png" alt="Polygone 8"
+                                class="md:w-[150px] lg:hidden">
+                        </div>
+                        <!-- Polygone 9 -->
+                        <div class="absolute top-[48%] left-[82%] animate-float md:left-[75%]">
+                            <img src="../images/Phone - Quiz sélection/Déco haut droite/P-2.png" alt="Polygone 9"
+                                class="md:w-[100px] lg:hidden">
+                        </div>
+                        <!-- Polygone 10 -->
+                        <div class="absolute top-[78%] left-[82%] animate-float2 md:top-[80%]">
+                            <img src="../images/Phone - Quiz sélection/Déco haut droite/P-1.png" alt="Polygone 10"
+                                class="lg:hidden">
+                        </div>
 
-        <h2 class="mt-[35%] text-center font-rubik text-primary text-2xl font-medium">Bienvenue "PLAYER"</h2>
-        <h1 class="font-changa text-[2.5rem] text-center mb-5 text-primary">Choix du quiz</h1>
-</header>
+                    </div>
+                </div>
+            </section>
 
-<main class="flex flex-col gap-10">
+            <!-- *****************************************************************************************************************
+         *********************************************************************************************************************
+         ***************************************************************************************************** VERSION ORDINATEUR -->
+
+            <!-- HAUT A GAUCHE -->
+            <section class="hidden lg:block top-0 left-0">
+                <!-- Conteneur principal -->
+                <div class="absolute h-[250px] w-full max-w-[250px] overflow-hidden top-0 left-0">
+                    <div class="relative w-full h-[100%]">
+                        <!-- Polygone 1 -->
+                        <div class="absolute top-[5%] left-[5%] animate-float">
+                            <img src="../images/Desktop - Quiz selection/Deco haut gauche/P-1.png" alt="Polygone 1"
+                                class="hidden lg:block">
+                        </div>
+                        <!-- Polygone 2 -->
+                        <div class="absolute top-[5%] left-[43%] animate-float2">
+                            <img src="../images/Desktop - Quiz selection/Deco haut gauche/P-2.png" alt="Polygone 2"
+                                class="hidden lg:block">
+                        </div>
+                        <!-- Polygone 3 -->
+                        <div class="absolute top-[25%] left-[5%] animate-float2">
+                            <img src="../images/Desktop - Quiz selection/Deco haut gauche/P-4.png" alt="Polygone 3"
+                                class="hidden lg:block">
+                        </div>
+                        <!-- Polygone 4 -->
+                        <div class="absolute top-[45%] left-[43%] animate-float">
+                            <img src="../images/Desktop - Quiz selection/Deco haut gauche/P-3.png" alt="Polygone 4"
+                                class="hidden lg:block">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HAUT A DROITE -->
+            <section class="hidden lg:block top-0 right-0">
+                <!-- Conteneur principal -->
+                <div class="absolute h-[250px] w-full max-w-[250px] overflow-hidden top-0 right-0">
+                    <div class="relative w-full h-[100%]">
+                        <!-- Polygone 1 -->
+                        <div class="absolute top-[5%] left-[0%] animate-float">
+                            <img src="../images/Desktop - Quiz selection/Deco haut droite/P-2.png" alt="Polygone 1"
+                                class="hidden lg:block">
+                        </div>
+                        <!-- Polygone 2 -->
+                        <div class="absolute top-[5%] left-[68%] animate-float2">
+                            <img src="../images/Desktop - Quiz selection/Deco haut droite/P-3.png" alt="Polygone 2"
+                                class="hidden lg:block">
+                        </div>
+                        <!-- Polygone 3 -->
+                        <div class="absolute top-[25%] left-[0%] animate-float2">
+                            <img src="../images/Desktop - Quiz selection/Deco haut droite/P-1.png" alt="Polygone 3"
+                                class="hidden lg:block">
+                        </div>
+                        <!-- Polygone 4 -->
+                        <div class="absolute top-[35%] left-[55%] animate-float">
+                            <img src="../images/Desktop - Quiz selection/Deco haut droite//P-4.png" alt="Polygone 4"
+                                class="hidden lg:block">
+                        </div>
+                        <div class="absolute top-[65%] left-[43%] animate-float2">
+                            <img src="../images/Desktop - Quiz selection/Deco haut droite//P-5.png" alt="Polygone 5"
+                                class="hidden lg:block">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <h2 class="text-center font-rubik text-primary text-2xl font-medium lg:text-[60px] mt-[2%] mb-[-1rem]">
+                Bienvenue "PLAYER"</h2>
+            <h1 class="font-changa text-[3rem] text-center mb-1 text-primary lg:text-[128px] lg:mb-[-2rem]">Choix du
+                quiz</h1>
+        </header>
+
+        <main class="flex flex-col gap-10 lg:flex-row lg:justify-between lg:gap-10 lg:mt-10 w-full px-[10%]">
 
             <!-- CHOIX 1 quiz *************************************************************************** 
+   ******************************************************************************************** 
    ******************************************************************************************** 
    ******************************************************************************************** 
    ********************************************************************************************-->
 
             <article
-                class="relative h-full max-w-full bg-primaryopacity border-[5px] border-primary rounded-[1rem] shadow-inner-box">
+                class="relative h-full w-full lg:w-1/3 bg-primaryopacity border-[5px] border-primary rounded-[1rem] shadow-inner-box">
 
                 <!-- EN TETE -->
-                <h3 class="text-light font-changa my-3 text-stroke">Jeux Vidéo</h3>
+                <h3 class="text-light font-changa my-3 text-stroke text-[400%] ">Jeux Vidéo</h3>
                 <!-- Trait décoratif -->
                 <div class="border-t-8 border-light rounded-full mx-4 mb-6"></div>
 
 
-                <div class="flex flex-col gap-4
-            ">
+                <div class="flex flex-col gap-2">
                     <!-- RANK 1  -->
                     <div
-                        class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                        class="flex flex-row items-center justify-between mx-4 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
                         <div class="flex gap-2">
 
                             <span
-                                class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                class="inline-flex items-center justify-center w-10 h-10 border-4 border-gray-custom rounded-full text-center bg-transparent">
                                 1
                             </span>
 
-                            <div class="flex flex-col ml-4">
-                                <span class="text-black text-xl font-bold ">Davis Curtis</span>
-                                <span class="text-graycustom text-lg font-semibold">2,569 points</span>
+                            <div class="flex flex-col ml-2">
+                                <span class="text-black text-lg font-bold">Davis Curtis</span>
+                                <span class="text-graycustom text-md font-semibold">2,569 points</span>
                             </div>
                         </div>
 
                         <div>
                             <img src="../images/Phone - Quiz sélection/Gold.png" alt="Médaille d'or"
-                                class="w-[2.5rem] inline-flex items-center justify-center ">
+                                class="w-[2rem] inline-flex items-center justify-center">
                         </div>
                     </div>
 
                     <!-- RANK 2  -->
                     <div
-                        class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                        class="flex flex-row items-center justify-between mx-4 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
                         <div class="flex gap-2">
 
                             <span
-                                class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                class="inline-flex items-center justify-center w-10 h-10 border-4 border-gray-custom rounded-full text-center bg-transparent">
                                 2
                             </span>
 
-                            <div class="flex flex-col ml-4">
-                                <span class="text-black text-xl font-bold ">Alena Donin</span>
-                                <span class="text-graycustom text-lg font-semibold">1,469 points</span>
+                            <div class="flex flex-col ml-2">
+                                <span class="text-black text-lg font-bold">Alena Donin</span>
+                                <span class="text-graycustom text-md font-semibold">1,469 points</span>
                             </div>
                         </div>
 
                         <div>
                             <img src="../images/Phone - Quiz sélection/Silver.png" alt="Médaille d'argent"
-                                class="w-[2.5rem] inline-flex items-center justify-center ">
+                                class="w-[2rem] inline-flex items-center justify-center">
                         </div>
                     </div>
 
 
                     <!-- RANK 3  -->
                     <div
-                        class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                        class="flex flex-row items-center justify-between mx-4 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
                         <div class="flex gap-2">
 
                             <span
-                                class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                class="inline-flex items-center justify-center w-10 h-10 border-4 border-gray-custom rounded-full text-center bg-transparent">
                                 3
                             </span>
 
-                            <div class="flex flex-col ml-4">
-                                <span class="text-black text-xl font-bold ">Graig Gouse</span>
-                                <span class="text-graycustom text-lg font-semibold">1,053 points</span>
+                            <div class="flex flex-col ml-2">
+                                <span class="text-black text-lg font-bold">Graig Gouse</span>
+                                <span class="text-graycustom text-md font-semibold">1,053 points</span>
                             </div>
                         </div>
 
                         <div>
                             <img src="../images/Phone - Quiz sélection/Bronze.png" alt="Médaille de Bronze"
-                                class="w-[2.5rem] inline-flex items-center justify-center ">
+                                class="w-[2rem] inline-flex items-center justify-center">
                         </div>
                     </div>
                 </div>
@@ -119,186 +251,205 @@
 
             </article>
 
-            <!-- CHOIX 2 quiz *************************************************************************** 
+
+            <!-- *************************************************************************** 
    ******************************************************************************************** 
+   ********************************************************************************************
+    ******************************************************************************************** 
+   ********************************************************************************************
+    ******************************************************************************************** 
+   ********************************************************************************************
+   ****************************** A SUUPRIMER *************************************************** 
+   ******************************************************************************************** 
+    ******************************************************************************************** 
+   ********************************************************************************************
+    ******************************************************************************************** 
+   ********************************************************************************************
    ******************************************************************************************** 
    ********************************************************************************************-->
- 
-   <article
-   class="relative h-full max-w-full bg-primaryopacity border-[5px] border-primary rounded-[1rem] shadow-inner-box">
 
-   <!-- EN TETE -->
-   <h3 class="text-light font-changa my-3 text-stroke">Jeux Vidéo</h3>
-   <!-- Trait décoratif -->
-   <div class="border-t-8 border-light rounded-full mx-4 mb-6"></div>
+            <article
+                class="relative h-full w-full lg:w-1/3 bg-primaryopacity border-[5px] border-primary rounded-[1rem] shadow-inner-box">
 
-
-   <div class="flex flex-col gap-4
-">
-       <!-- RANK 1  -->
-       <div
-           class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
-           <div class="flex gap-2">
-
-               <span
-                   class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
-                   1
-               </span>
-
-               <div class="flex flex-col ml-4">
-                   <span class="text-black text-xl font-bold ">Davis Curtis</span>
-                   <span class="text-graycustom text-lg font-semibold">2,569 points</span>
-               </div>
-           </div>
-
-           <div>
-               <img src="../images/Phone - Quiz sélection/Gold.png" alt="Médaille d'or"
-                   class="w-[2.5rem] inline-flex items-center justify-center ">
-           </div>
-       </div>
-
-       <!-- RANK 2  -->
-       <div
-           class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
-           <div class="flex gap-2">
-
-               <span
-                   class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
-                   2
-               </span>
-
-               <div class="flex flex-col ml-4">
-                   <span class="text-black text-xl font-bold ">Alena Donin</span>
-                   <span class="text-graycustom text-lg font-semibold">1,469 points</span>
-               </div>
-           </div>
-
-           <div>
-               <img src="../images/Phone - Quiz sélection/Silver.png" alt="Médaille d'argent"
-                   class="w-[2.5rem] inline-flex items-center justify-center ">
-           </div>
-       </div>
+                <!-- EN TETE -->
+                <h3 class="text-light font-changa my-3 text-stroke text-[400%] ">Jeux Vidéo</h3>
+                <!-- Trait décoratif -->
+                <div class="border-t-8 border-light rounded-full mx-4 mb-6"></div>
 
 
-       <!-- RANK 3  -->
-       <div
-           class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
-           <div class="flex gap-2">
+                <div class="flex flex-col gap-2">
+                    <!-- RANK 1  -->
+                    <div
+                        class="flex flex-row items-center justify-between mx-4 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                        <div class="flex gap-2">
 
-               <span
-                   class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
-                   3
-               </span>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                1
+                            </span>
 
-               <div class="flex flex-col ml-4">
-                   <span class="text-black text-xl font-bold ">Graig Gouse</span>
-                   <span class="text-graycustom text-lg font-semibold">1,053 points</span>
-               </div>
-           </div>
+                            <div class="flex flex-col ml-2">
+                                <span class="text-black text-lg font-bold">Davis Curtis</span>
+                                <span class="text-graycustom text-md font-semibold">2,569 points</span>
+                            </div>
+                        </div>
 
-           <div>
-               <img src="../images/Phone - Quiz sélection/Bronze.png" alt="Médaille de Bronze"
-                   class="w-[2.5rem] inline-flex items-center justify-center ">
-           </div>
-       </div>
-   </div>
+                        <div>
+                            <img src="../images/Phone - Quiz sélection/Gold.png" alt="Médaille d'or"
+                                class="w-[2rem] inline-flex items-center justify-center">
+                        </div>
+                    </div>
 
-   <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom:focus">
-       Let's Go!
-   </button>
+                    <!-- RANK 2  -->
+                    <div
+                        class="flex flex-row items-center justify-between mx-4 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                        <div class="flex gap-2">
 
-</article>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                2
+                            </span>
+
+                            <div class="flex flex-col ml-2">
+                                <span class="text-black text-lg font-bold">Alena Donin</span>
+                                <span class="text-graycustom text-md font-semibold">1,469 points</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="../images/Phone - Quiz sélection/Silver.png" alt="Médaille d'argent"
+                                class="w-[2rem] inline-flex items-center justify-center">
+                        </div>
+                    </div>
+
+
+                    <!-- RANK 3  -->
+                    <div
+                        class="flex flex-row items-center justify-between mx-4 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                        <div class="flex gap-2">
+
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                3
+                            </span>
+
+                            <div class="flex flex-col ml-2">
+                                <span class="text-black text-lg font-bold">Graig Gouse</span>
+                                <span class="text-graycustom text-md font-semibold">1,053 points</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="../images/Phone - Quiz sélection/Bronze.png" alt="Médaille de Bronze"
+                                class="w-[2rem] inline-flex items-center justify-center">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom:focus">
+                    Let's Go!
+                </button>
+
+            </article>
 
             <!-- CHOIX 3 quiz *************************************************************************** 
    ******************************************************************************************** 
    ******************************************************************************************** 
    ********************************************************************************************-->
- 
-   <article
-   class="relative h-full max-w-full bg-primaryopacity border-[5px] border-primary rounded-[1rem] shadow-inner-box">
 
-   <!-- EN TETE -->
-   <h3 class="text-light font-changa my-3 text-stroke">Jeux Vidéo</h3>
-   <!-- Trait décoratif -->
-   <div class="border-t-8 border-light rounded-full mx-4 mb-6"></div>
+            <article
+                class="relative h-full w-full lg:w-1/3 bg-primaryopacity border-[5px] border-primary rounded-[1rem] shadow-inner-box">
 
-
-   <div class="flex flex-col gap-4
-">
-       <!-- RANK 1  -->
-       <div
-           class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
-           <div class="flex gap-2">
-
-               <span
-                   class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
-                   1
-               </span>
-
-               <div class="flex flex-col ml-4">
-                   <span class="text-black text-xl font-bold ">Davis Curtis</span>
-                   <span class="text-graycustom text-lg font-semibold">2,569 points</span>
-               </div>
-           </div>
-
-           <div>
-               <img src="../images/Phone - Quiz sélection/Gold.png" alt="Médaille d'or"
-                   class="w-[2.5rem] inline-flex items-center justify-center ">
-           </div>
-       </div>
-
-       <!-- RANK 2  -->
-       <div
-           class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
-           <div class="flex gap-2">
-
-               <span
-                   class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
-                   2
-               </span>
-
-               <div class="flex flex-col ml-4">
-                   <span class="text-black text-xl font-bold ">Alena Donin</span>
-                   <span class="text-graycustom text-lg font-semibold">1,469 points</span>
-               </div>
-           </div>
-
-           <div>
-               <img src="../images/Phone - Quiz sélection/Silver.png" alt="Médaille d'argent"
-                   class="w-[2.5rem] inline-flex items-center justify-center ">
-           </div>
-       </div>
+                <!-- EN TETE -->
+                <h3 class="text-light font-changa my-3 text-stroke text-[400%] ">Jeux Vidéo</h3>
+                <!-- Trait décoratif -->
+                <div class="border-t-8 border-light rounded-full mx-4 mb-6"></div>
 
 
-       <!-- RANK 3  -->
-       <div
-           class="flex flex-row items-center justify-between mx-10 p-6 bg-white border-b border-primary rounded-3xl shadow-2xl">
-           <div class="flex gap-2">
+                <div class="flex flex-col gap-2">
+                    <!-- RANK 1  -->
+                    <div
+                        class="flex flex-row items-center justify-between mx-4 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                        <div class="flex gap-2">
 
-               <span
-                   class="inline-flex items-center justify-center w-12 h-12 border-4 border-gray-custom rounded-full text-center bg-transparent">
-                   3
-               </span>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                1
+                            </span>
 
-               <div class="flex flex-col ml-4">
-                   <span class="text-black text-xl font-bold ">Graig Gouse</span>
-                   <span class="text-graycustom text-lg font-semibold">1,053 points</span>
-               </div>
-           </div>
+                            <div class="flex flex-col ml-2">
+                                <span class="text-black text-lg font-bold">Davis Curtis</span>
+                                <span class="text-graycustom text-md font-semibold">2,569 points</span>
+                            </div>
+                        </div>
 
-           <div>
-               <img src="../images/Phone - Quiz sélection/Bronze.png" alt="Médaille de Bronze"
-                   class="w-[2.5rem] inline-flex items-center justify-center ">
-           </div>
-       </div>
-   </div>
+                        <div>
+                            <img src="../images/Phone - Quiz sélection/Gold.png" alt="Médaille d'or"
+                                class="w-[2rem] inline-flex items-center justify-center">
+                        </div>
+                    </div>
 
-   <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom:focus">
-       Let's Go!
-   </button>
+                    <!-- RANK 2  -->
+                    <div
+                        class="flex flex-row items-center justify-between mx-4 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                        <div class="flex gap-2">
 
-</article>
-</main>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                2
+                            </span>
+
+                            <div class="flex flex-col ml-2">
+                                <span class="text-black text-lg font-bold">Alena Donin</span>
+                                <span class="text-graycustom text-md font-semibold">1,469 points</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="../images/Phone - Quiz sélection/Silver.png" alt="Médaille d'argent"
+                                class="w-[2rem] inline-flex items-center justify-center">
+                        </div>
+                    </div>
+
+
+                    <!-- RANK 3  -->
+                    <div
+                        class="flex flex-row items-center justify-between mx-4 p-4 bg-white border-b border-primary rounded-3xl shadow-2xl">
+                        <div class="flex gap-2">
+
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 border-4 border-gray-custom rounded-full text-center bg-transparent">
+                                3
+                            </span>
+
+                            <div class="flex flex-col ml-2">
+                                <span class="text-black text-lg font-bold">Graig Gouse</span>
+                                <span class="text-graycustom text-md font-semibold">1,053 points</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="../images/Phone - Quiz sélection/Bronze.png" alt="Médaille de Bronze"
+                                class="w-[2rem] inline-flex items-center justify-center">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-custom2 btn-custom2:hover btn-custom:focus">
+                    Let's Go!
+                </button>
+            </article>
+        </main>
+
+
+
+
+        <section class="hidden lg:block relative bottom-0-right-0">
+            <div class="relative h-[150px] w-full max-w-[130px] overflow-hidden bottom-[-2rem] left-[90%]">
+                <img src="../images/Desktop - Quiz selection/Point interrogation.png" alt="Point d'interrogation">
+            </div>
+        </section>
+    </section 
 
 
 </body>

@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+
+
   // Chemins où Tailwind doit rechercher les classes
-    content: [
-      './index.php',
-      './source/**/*.php',
-    ],
+  content: ["./*.{html,js,css,php}", "./src/**/*.{html,js,css,php}", "./Front-html/**/*.html"],
   theme: {
     extend: {
       colors: {
@@ -21,7 +20,7 @@ module.exports = {
         "grid-pattern":
           "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC')",
         "gradient-clair-orange":
-          "linear-gradient(to bottom, var(--light-color) 68%, var(--secondary-color) 100%)",
+          "linear-gradient(to bottom, var(--light-color) 48%, var(--secondary-color) 100%)",
       },
       fontFamily: {
         changa: ["Changa One", "sans-serif"],
@@ -39,6 +38,7 @@ module.exports = {
         float: "float 3s ease-in-out infinite",
         float2: "float 3s ease-in-out infinite 1.5s", // Pour décaler l'animation
         "bg-scroll": "bg-scrolling-reverse 1.92s linear infinite",
+        'fade-in': 'fadeIn 1s ease-in-out forwards',
       },
       keyframes: {
         float: {
@@ -48,10 +48,21 @@ module.exports = {
         "bg-scrolling-reverse": {
           "100%": { backgroundPosition: "50px 50px" },
         },
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
       },
+      screens: {
+        'custom-500': '500px', // Ajout d'un breakpoint personnalisé pour 500px
+      },
+
     },
   },
 
+
+
+  
   // Ajout des plugins personnalisés
   plugins: [
     function ({ addComponents }) {
@@ -76,6 +87,16 @@ module.exports = {
         ".btn-custom2:focus": {
           "@apply bg-[#541A25]": {},
         },
+        ".btn-custom3": {
+          "@apply m-5 p-5 bg-secondary text-darkprimary rounded-lg border-2 border-light w-[60%] font-changa text-3xl font-light shadow-lg":
+            {},
+        },
+        ".btn-custom3:hover": {
+          "@apply bg-[#E7C298]": {},
+        },
+        ".btn-custom3:focus": {
+          "@apply bg-[#E7C298]": {},
+        },
       });
     },
 
@@ -83,10 +104,16 @@ module.exports = {
       addUtilities(
         {
           ".text-stroke": {
-            "-webkit-text-stroke": "4.5px #6E433C",
+            "-webkit-text-stroke": "7.5px #6E433C",
             color: "#FEFBE8",
-            "font-size": "4rem",
+            "font-size": "5rem",
             "line-height": "1",
+          },
+          ".progress-bar": {
+            "@apply bg-darkprimary": {},
+          },
+          ".progress-bar-bg": {
+            "@apply bg-light": {},
           },
         },
         ["responsive", "hover"]
